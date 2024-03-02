@@ -1,0 +1,95 @@
+.header_nav {
+    background: transparent linear-gradient(270deg, #00264d 20%, #000033 70%,  #000000 100%) 0% 0% no-repeat padding-box;
+    width: 100%;
+    padding: 0 ;
+ 
+  }
+.navbar-brand{
+  margin-left: 20px;
+}
+.rout_class
+  {
+    margin-top: 75px;
+  }
+.navbar-toggler{
+    margin-right: 35px;
+}
+  .navbar-nav {
+    height: 100%;
+    margin-left: auto;
+    padding-right: 30px;
+  }
+  
+  .logo_img {
+    height:75px;
+
+  }
+  
+  .nav-item {
+    padding-left: 20px;
+    min-width: 85px;
+  }
+
+  
+  .navItemHeader_item {
+    font-family: Proxima_Nova_Regular;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #F1F1F1 !important;
+    opacity: 1;
+  }
+  
+ 
+  
+  .active-route {
+    font-size: 18px;
+    color: #fff !important;
+    font-family: Proxima_Nova_Bold;
+    line-height: 22px;
+  }
+ 
+
+
+
+  @media only screen and (max-width: 991px) {
+   
+    .navbar-nav li {
+      position: relative;
+      line-height: 20px;
+      font-family: Proxima_Nova_Regular !important;
+      display: inline-block;
+      width: 100%;
+      z-index: 99;
+    }
+  
+    .nav-item {
+      padding-left: 0px;
+    }
+  
+    .navbar-nav li:hover {
+     background-color: rgba(34, 47, 104, 0.411);
+      
+      width: 100%;
+      -webkit-transition: width .2s ease-in;
+      -moz-transition: width .2s ease-in;
+      -ms-transition: width .2s ease-in;
+      transition: width .2s ease-in;
+  
+    }
+  
+    .navbar-nav li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 15px 15px 30px;
+    }
+  
+    .navbar-nav {
+        background-color: rgba(18, 27, 69, 1);
+        text-align: center;
+        padding: 10px 0 10px 0;
+        margin-top: -10px;
+      }
+    
+  }
+  

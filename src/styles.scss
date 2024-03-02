@@ -1,0 +1,35 @@
+
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~font-awesome/scss/font-awesome.scss';
+
+
+
+@font-face {
+  font-family: 'Proxima_Nova_Regular';
+  src: url('assets/fonts/ProximaNova-Regular.otf') format('opentype');
+}
+
+
+
+@font-face {
+  font-family: 'Proxima_Nova_Extrabold';
+  src: url('assets/fonts/Proxima Nova Extrabold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima_Nova_Bold';
+  src: url('assets/fonts/Proxima Nova Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima_Nova_Black';
+  src: url('assets/fonts/Proxima Nova Black.otf') format('opentype');
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Proxima_Nova_Regular;
+}

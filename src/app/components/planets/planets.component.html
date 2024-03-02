@@ -1,0 +1,67 @@
+<div class="plan_page">
+  <div class="spinner" *ngIf ="loading">
+    <img  src="assets/images/spin.gif" >
+  </div>
+
+
+  <div class="page" [hidden] = "loading">
+        <h1 class="main_head">Star war planets</h1>
+       
+    
+    <div class="row m-0 justify-content-center">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 " *ngFor="let item of FstPageData">
+        <div class="planet_card" >
+          <p class="name_head text-center">{{item.name}}</p>
+          
+          <div class="row m-0 content_row">
+            <div class="col-12 text-start">
+              <p class="text "> Climate  </p> 
+              <p class="value">  {{item.climate }}</p> 
+            </div>
+            <div class="col-12 text-end ">
+              <p class="text"> Population  </p>
+              <p class="value">  {{item.population }}</p>  
+            </div>
+          
+            <div class="col-12 text-start">
+              <p class="text "> Terrain </p> 
+              <p class="value long_text"> {{item.terrain }}</p>  
+            </div>
+          </div>
+         
+         
+          <a href="javascript:void(0)" (click)="toResidents(item)" class="res_link">Residents <span class="fa fa-angle-double-right action_icon"></span></a>
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="nextContent" [hidden] = "loading">
+    <div class="row m-0 justify-content-center">
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-7 page_col">
+         <div class="pagination">
+          <button class="btn select_btns" (click)="prevPage()" [disabled]="this.planets.previous == null">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <div class="page_txt">
+            <p >{{page}}</p> 
+          </div>
+          <button class="btn select_btns" (click)="nextPage()" [disabled]="this.planets.next == null">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+         </div>
+      </div>
+    </div>
+ 
+   
+  </div>
+  
+
+</div>
+
+  
+ 
+  
+
+  

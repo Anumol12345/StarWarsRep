@@ -1,0 +1,45 @@
+<div class="res_page">
+    <div class="spinner" *ngIf ="loading">
+        <img  src="assets/images/spin.gif" >
+      </div>
+
+      <div class="page" [hidden] ="loading || ResArray.length == 0">
+        
+        <div class="row m-0">
+          <div class="col-xl-9 col-lg-9 col-md-8 col-sm-7 col-12">
+            <h1 class="main_head">Residents</h1>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-12 text-end">
+            <button class="btn backBtn" (click)="backTo()">Back to planets</button>
+          </div>
+        </div>
+       
+        <div class="row m-0 justify-content-center">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 " *ngFor="let item of ResArray">
+            <div class="res_card" >
+              <img class="user_img" src="assets/images/user.png" >
+              <p class="name_head text-center">{{item.data.name}}</p>
+              <div class="row m-0 justify-content-center gen_row">
+                <div class="col-4 text-start">
+                  <p  class="res_txt">Gender</p>
+                  <p class="res_val">{{item.data.gender }}  </p>
+                </div>
+                <div class="col-4 text-center">
+                  <p class="res_txt">Height</p>
+                  <p class="res_val">{{item.data.height }}  </p>
+                </div>
+                  <div class="col-4 text-end">
+                    <p  class="res_txt">Mass</p>
+                    <p class="res_val">{{item.data.mass }}  </p>
+                    </div>
+                  </div>
+                  
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <p *ngIf ="!loading && ResArray.length == 0" class="noRes">No Residents Here</p>
+</div>
+
